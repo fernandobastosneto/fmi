@@ -1,33 +1,48 @@
 #' @importFrom tibble tibble
 NULL
 
-#' NGDP_RPCH - real gdp growth
+#' Crescimento do PIB
 #'
 #' Gross domestic product is the most commonly used single measure
 #' of a country's overall economic activity. It represents the total
 #' value at constant prices of final goods and services produced within
 #' a country during a specified time period, such as one year.
 #' Source: World Economic Outlook
+#' \describe{
+#'   \item{value}{porcentagem}
+#'}
+#' @source \url{https://www.imf.org/external/datamapper/datasets/WEO}
 "gdpgrowth"
 
-#'  NGDPD - GDP, current prices
+#'  PIB a preços correntes
+#'
 #'  Gross domestic product is the most commonly used single measure
 #'  of a country's overall economic activity. It represents the total
 #'  value at current prices of final goods and services produced within
 #'  a country during a specified time period, such as one year.
 #'  Source: World Economic Outlook
+#' \describe{
+#'   \item{value}{bilhões de U.S. dólares}
+#'}
+#' @source \url{https://www.imf.org/external/datamapper/datasets/WEO}
 "gdpcurrent"
 
-#' NGDPDPC, GDP per capita, current prices
+#' PIB per capita, a preços correntes
+#'
 #' Gross domestic product is the most commonly used single measure
 #' of a country's overall economic activity. It represents the total
 #' value at current prices of final goods and services produced within
 #' a country during a specified time period divided by the average
 #' population for the same one year.
 #' Source: World Economic Outlook
+#' \describe{
+#'   \item{value}{dólares per capita}
+#'}
+#' @source \url{https://www.imf.org/external/datamapper/datasets/WEO}
 "gdppercapita"
 
-#' PPPGDP, GDP current prices - PPP
+#' PIB por Paridade do Poder de Compra, preços correntes
+#'
 #' Gross domestic product is the most commonly used
 #' single measure of a country's overall economic activity.
 #' It represents the total value in PPP terms of final
@@ -69,4 +84,48 @@ NULL
 #'  For the 2008 revision, see figure 1.16 from Chapter 1 of the April 2008 WEO.
 #'  For 2003 revision, see Box A2 from the April 2004 WEO. For the 2000 revision,
 #'  see Box A1 from the May 2000 WEO.
+#' \describe{
+#'   \item{value}{bilhões de dólares, paridade de poder de compra}
+#'}
+#' @source \url{https://www.imf.org/external/datamapper/datasets/WEO}
 "gdpppp"
+
+#' Inflação
+#'
+#' \describe{
+#'   \item{value}{porcentagem, variação anual}
+#'}
+#' @source \url{https://www.imf.org/external/datamapper/datasets/WEO}
+"inflacao"
+
+#' Saldo em Transações Correntes
+#'
+#' \describe{
+#'   \item{value}{bilhões de dólares}
+#'}
+#' @source \url{https://www.imf.org/external/datamapper/datasets/WEO}
+"transacoescorrentes"
+
+#' Saldo em Transações Correntes, % do PIB
+#'
+#' \describe{
+#'   \item{value}{porcentagem do pib}
+#'}
+#' @source \url{https://www.imf.org/external/datamapper/datasets/WEO}
+"transacoescorrentes_gdp"
+
+#' Dívida Líquida do Governo
+#'
+#' \describe{
+#'   \item{value}{porcentagem do pib, variação anual}
+#'}
+#' @source \url{https://www.imf.org/external/datamapper/datasets/WEO}
+"dividaliquida"
+
+#' Dívida Bruta do Governo
+#'
+#' \describe{
+#'   \item{value}{porcentagem do pib}
+#'}
+#' @source \url{https://www.imf.org/external/datamapper/datasets/WEO}
+"dividabruta"

@@ -2,8 +2,6 @@ library(magrittr)
 
 url <- "https://www.imf.org/external/datamapper//export/excel.php?indicator=NGDP_RPCH"
 
-indicador_nomes <-
-
 httr::GET(url, httr::write_disk(here::here("data-raw", "realgdpgrowth.xls"), overwrite = T))
 
 gdpgrowth <- readxl::read_excel(here::here("data-raw", "realgdpgrowth.xls"))
@@ -56,14 +54,14 @@ dividabruta <- readxl::read_excel(here::here("data-raw", "dividabruta.xls"))
 fun <- . %>%
   tidyr::pivot_longer(2:tidyselect::last_col(), names_to = "ano", values_to = "value") %>%
   tidyr::drop_na() %>%
-  dplyr::mutate(value = dplyr::case_when(stringr::str_detect(value,"no data") ~ "0",
-                                         TRUE ~ value),
+  dplyr::mutate(value = dplyr::na_if(value, "no data"),
                 value = as.numeric(value)) %>%
-  janitor::clean_names()
+  dplyr::rename(pais = 1)
 
 desemprego <- fun(desemprego)
 dividabruta <- fun(dividabruta)
 dividaliquida <- fun(dividaliquida)
+gdpgrowth <- fun(gdpgrowth)
 gdpcurrent <- fun(gdpcurrent)
 gdppercapita <- fun(gdppercapita)
 gdpppp <- fun(gdpppp)
@@ -73,5 +71,5 @@ transacoescorrentes_gdp <- fun(transacoescorrentes_gdp)
 
 
 usethis::use_data(desemprego, dividabruta, dividaliquida, gdpcurrent,
-                  gdppercapita, gdpppp, inflacao, transacoescorrentes,
-                  transacoescorrentes_gdp)
+                  gdppercapita, gdpppp, gdpgrowth, inflacao,
+                  transacoescorrentes, transacoescorrentes_gdp, overwrite = T)

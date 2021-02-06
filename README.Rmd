@@ -1,0 +1,69 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# fmi
+
+Dados atualizados do World Economic Outlook. 
+
+O FMI não oferece API específica para dados atualizados do World Economic Outlook. Contudo, o [dashboard](https://www.imf.org/external/datamapper) do datamapper permite que determinados indicadores sejam baixados diretamente do site, sem a necessidade de se perder nos muitos links do site do Fundo (nem mesmo se aventurar no complicado mundo do smdx). Esse pacote atualizará automaticamente os dados enquanto o datamapper existir.
+
+Os dados, divididos por indicadores, estão em formato tidy e contêm, todos, três colunas: país, ano e valor.
+
+Dados disponíveis:
+
+- desemprego
+- inflação
+- dívida bruta do governo
+- dívida líquida (grau de endividamento)
+- pib a preços correntes
+- crescimento do pib
+- pip per capita
+- pip por paridade do poder de compra
+- saldo em transações correntes
+- saldo em transações correntes em porcentagem do pib
+
+## Instalação
+
+``` r
+remotes::install.github("fernandobastosneto/fmi")
+```
+
+## Exemplos
+
+```{r example}
+library(fmi)
+library(magrittr)
+
+fmi::gdpgrowth %>%
+  dplyr::filter(pais == "Brazil")
+
+```
+
+```{r}
+
+fmi::transacoescorrentes %>% 
+  dplyr::filter(pais == "Brazil")
+
+```
+
+```{r}
+fmi::dividaliquida %>% 
+  dplyr::filter(pais == "Brazil")
+```
+```{r}
+fmi::dividabruta %>% 
+  dplyr::filter(pais == "Brazil") %>% 
+  dplyr::arrange(desc(ano))
+```
