@@ -15,7 +15,7 @@ dividaliquida
 }
 \description{
 \describe{
-  \item{value}{porcentagem do pib}
+  \item{value}{porcentagem do pib, variação anual}
 }
 }
 \keyword{datasets}

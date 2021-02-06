@@ -52,6 +52,7 @@ httr::GET(url, httr::write_disk(here::here("data-raw", "dividabruta.xls"), overw
 dividabruta <- readxl::read_excel(here::here("data-raw", "dividabruta.xls"))
 
 fun <- . %>%
+  tibble::as_tibble() %>%
   tidyr::pivot_longer(2:tidyselect::last_col(), names_to = "ano", values_to = "value") %>%
   tidyr::drop_na() %>%
   dplyr::mutate(value = dplyr::na_if(value, "no data"),

@@ -98,6 +98,14 @@ NULL
 #' @source \url{https://www.imf.org/external/datamapper/datasets/WEO}
 "inflacao"
 
+#' Desemprego
+#'
+#' \describe{
+#'   \item{value}{porcentagem, variação anual}
+#'}
+#' @source \url{https://www.imf.org/external/datamapper/datasets/WEO}
+"desemprego"
+
 #' Saldo em Transações Correntes
 #'
 #' \describe{
@@ -106,7 +114,7 @@ NULL
 #' @source \url{https://www.imf.org/external/datamapper/datasets/WEO}
 "transacoescorrentes"
 
-#' Saldo em Transações Correntes, % do PIB
+#' Saldo em Transações Correntes, \% do PIB
 #'
 #' \describe{
 #'   \item{value}{porcentagem do pib}

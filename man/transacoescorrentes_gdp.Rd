@@ -3,7 +3,7 @@
 \docType{data}
 \name{transacoescorrentes_gdp}
 \alias{transacoescorrentes_gdp}
-\title{Saldo em Transações Correntes, % do PIB}
+\title{Saldo em Transações Correntes, \% do PIB}
 \format{
 An object of class \code{tbl_df} (inherits from \code{tbl}, \code{data.frame}) with 10350 rows and 3 columns.
 }
