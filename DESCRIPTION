@@ -1,0 +1,15 @@
+Package: fmi
+Type: Package
+Title: Dados do World Economic Outlook
+Version: 0.1.0
+Author: Fernando Bastos
+Maintainer: Fernando Bastos <fernando.bastos@itamaraty.gov.br>
+Description: Dados do World Economic Outlook em formato tibble.
+    Dados retirados do datamapper do FMI.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Imports: 
+Remotes: 
+Depends: 
+    R (>= 2.10)
