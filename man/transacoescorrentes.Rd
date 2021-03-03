@@ -15,7 +15,7 @@ transacoescorrentes
 }
 \description{
 \describe{
-  \item{value}{bilhões de dólares}
+  \item{transacoescorrentes}{bilhões de dólares}
 }
 }
 \keyword{datasets}

@@ -15,7 +15,7 @@ desemprego
 }
 \description{
 \describe{
-  \item{value}{porcentagem, variação anual}
+  \item{desemprego}{porcentagem, variação anual}
 }
 }
 \keyword{datasets}

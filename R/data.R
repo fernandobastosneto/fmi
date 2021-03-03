@@ -1,6 +1,15 @@
 #' @importFrom tibble tibble
 NULL
 
+#' FMI - World Economic Outlook
+#'
+#' Agregado de todos os dados disponíveis no pacote "fmi".
+#' Crescimento do PIB; PIB a preços correntes; PIB per capita, a preços correntes;
+#' PIB por Paridade do Poder de Compra, preços correntes; Inflação; Desemprego;
+#' Saldo em Transações Correntes; Saldo em Transações Correntes, \% do PIB;
+#' Dívida Líquida do Governo; Dívida Bruta do Governo
+"fmi"
+
 #' Crescimento do PIB
 #'
 #' Gross domestic product is the most commonly used single measure
@@ -9,7 +18,7 @@ NULL
 #' a country during a specified time period, such as one year.
 #' Source: World Economic Outlook
 #' \describe{
-#'   \item{value}{porcentagem}
+#'   \item{gdpgrowth}{crescimento do PIB, em porcentagem}
 #'}
 #' @source \url{https://www.imf.org/external/datamapper/datasets/WEO}
 "gdpgrowth"
@@ -22,7 +31,7 @@ NULL
 #'  a country during a specified time period, such as one year.
 #'  Source: World Economic Outlook
 #' \describe{
-#'   \item{value}{bilhões de U.S. dólares}
+#'   \item{gdpcurrent}{bilhões de U.S. dólares}
 #'}
 #' @source \url{https://www.imf.org/external/datamapper/datasets/WEO}
 "gdpcurrent"
@@ -36,7 +45,7 @@ NULL
 #' population for the same one year.
 #' Source: World Economic Outlook
 #' \describe{
-#'   \item{value}{dólares per capita}
+#'   \item{gdppercapita}{dólares per capita}
 #'}
 #' @source \url{https://www.imf.org/external/datamapper/datasets/WEO}
 "gdppercapita"
@@ -85,7 +94,7 @@ NULL
 #'  For 2003 revision, see Box A2 from the April 2004 WEO. For the 2000 revision,
 #'  see Box A1 from the May 2000 WEO.
 #' \describe{
-#'   \item{value}{bilhões de dólares, paridade de poder de compra}
+#'   \item{gdpppp}{bilhões de dólares, paridade de poder de compra}
 #'}
 #' @source \url{https://www.imf.org/external/datamapper/datasets/WEO}
 "gdpppp"
@@ -93,7 +102,7 @@ NULL
 #' Inflação
 #'
 #' \describe{
-#'   \item{value}{porcentagem, variação anual}
+#'   \item{inflacao}{porcentagem, variação anual}
 #'}
 #' @source \url{https://www.imf.org/external/datamapper/datasets/WEO}
 "inflacao"
@@ -101,7 +110,7 @@ NULL
 #' Desemprego
 #'
 #' \describe{
-#'   \item{value}{porcentagem, variação anual}
+#'   \item{desemprego}{porcentagem, variação anual}
 #'}
 #' @source \url{https://www.imf.org/external/datamapper/datasets/WEO}
 "desemprego"
@@ -109,7 +118,7 @@ NULL
 #' Saldo em Transações Correntes
 #'
 #' \describe{
-#'   \item{value}{bilhões de dólares}
+#'   \item{transacoescorrentes}{bilhões de dólares}
 #'}
 #' @source \url{https://www.imf.org/external/datamapper/datasets/WEO}
 "transacoescorrentes"
@@ -117,7 +126,7 @@ NULL
 #' Saldo em Transações Correntes, \% do PIB
 #'
 #' \describe{
-#'   \item{value}{porcentagem do pib}
+#'   \item{transacoescorrentes_gdp}{porcentagem do pib}
 #'}
 #' @source \url{https://www.imf.org/external/datamapper/datasets/WEO}
 "transacoescorrentes_gdp"
@@ -125,7 +134,7 @@ NULL
 #' Dívida Líquida do Governo
 #'
 #' \describe{
-#'   \item{value}{porcentagem do pib, variação anual}
+#'   \item{dividaliquida}{porcentagem do pib, variação anual}
 #'}
 #' @source \url{https://www.imf.org/external/datamapper/datasets/WEO}
 "dividaliquida"
@@ -133,7 +142,7 @@ NULL
 #' Dívida Bruta do Governo
 #'
 #' \describe{
-#'   \item{value}{porcentagem do pib}
+#'   \item{dividabruta}{porcentagem do pib}
 #'}
 #' @source \url{https://www.imf.org/external/datamapper/datasets/WEO}
 "dividabruta"

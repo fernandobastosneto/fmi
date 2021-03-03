@@ -15,7 +15,7 @@ dividabruta
 }
 \description{
 \describe{
-  \item{value}{porcentagem do pib}
+  \item{dividabruta}{porcentagem do pib}
 }
 }
 \keyword{datasets}

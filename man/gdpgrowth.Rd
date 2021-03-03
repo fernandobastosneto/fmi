@@ -20,7 +20,7 @@ value at constant prices of final goods and services produced within
 a country during a specified time period, such as one year.
 Source: World Economic Outlook
 \describe{
-  \item{value}{porcentagem}
+  \item{gdpgrowth}{crescimento do PIB, em porcentagem}
 }
 }
 \keyword{datasets}

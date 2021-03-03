@@ -21,7 +21,7 @@ a country during a specified time period divided by the average
 population for the same one year.
 Source: World Economic Outlook
 \describe{
-  \item{value}{dólares per capita}
+  \item{gdppercapita}{dólares per capita}
 }
 }
 \keyword{datasets}

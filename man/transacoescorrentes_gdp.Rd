@@ -15,7 +15,7 @@ transacoescorrentes_gdp
 }
 \description{
 \describe{
-  \item{value}{porcentagem do pib}
+  \item{transacoescorrentes_gdp}{porcentagem do pib}
 }
 }
 \keyword{datasets}

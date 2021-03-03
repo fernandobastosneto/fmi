@@ -59,18 +59,51 @@ fun <- . %>%
                 value = as.numeric(value)) %>%
   dplyr::rename(pais = 1)
 
-desemprego <- fun(desemprego)
-dividabruta <- fun(dividabruta)
-dividaliquida <- fun(dividaliquida)
-gdpgrowth <- fun(gdpgrowth)
-gdpcurrent <- fun(gdpcurrent)
-gdppercapita <- fun(gdppercapita)
-gdpppp <- fun(gdpppp)
-inflacao <- fun(inflacao)
-transacoescorrentes <- fun(transacoescorrentes)
-transacoescorrentes_gdp <- fun(transacoescorrentes_gdp)
+desemprego <- fun(desemprego) %>%
+  dplyr::rename(desemprego = value)
 
+dividabruta <- fun(dividabruta) %>%
+  dplyr::rename(dividabruta = value)
+
+dividaliquida <- fun(dividaliquida) %>%
+  dplyr::rename(dividaliquida = value)
+
+gdpgrowth <- fun(gdpgrowth) %>%
+  dplyr::rename(gdpgrowth = value)
+
+gdpcurrent <- fun(gdpcurrent) %>%
+  dplyr::rename(gdpcurrent = value)
+
+gdppercapita <- fun(gdppercapita) %>%
+  dplyr::rename(gdppercapita = value)
+
+gdpppp <- fun(gdpppp) %>%
+  dplyr::rename(gdpppp = value)
+
+inflacao <- fun(inflacao) %>%
+  dplyr::rename(inflacao = value)
+
+transacoescorrentes <- fun(transacoescorrentes) %>%
+  dplyr::rename(transacoescorrentes = value)
+
+transacoescorrentes_gdp <- fun(transacoescorrentes_gdp) %>%
+  dplyr::rename(transacoescorrentes_gdp = value)
+
+fmi <- desemprego %>%
+  dplyr::full_join(dividabruta) %>%
+  dplyr::full_join(dividaliquida) %>%
+  dplyr::full_join(gdpcurrent) %>%
+  dplyr::full_join(gdppercapita) %>%
+  dplyr::full_join(gdpppp) %>%
+  dplyr::full_join(gdpgrowth) %>%
+  dplyr::full_join(inflacao) %>%
+  dplyr::full_join(transacoescorrentes) %>%
+  dplyr::full_join(transacoescorrentes_gdp)
 
 usethis::use_data(desemprego, dividabruta, dividaliquida, gdpcurrent,
                   gdppercapita, gdpppp, gdpgrowth, inflacao,
-                  transacoescorrentes, transacoescorrentes_gdp, overwrite = T)
+                  transacoescorrentes, transacoescorrentes_gdp,
+                  fmi, overwrite = T)
+
+
+

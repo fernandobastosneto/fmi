@@ -20,7 +20,7 @@ Gross domestic product is the most commonly used single measure
  a country during a specified time period, such as one year.
  Source: World Economic Outlook
 \describe{
-  \item{value}{bilhões de U.S. dólares}
+  \item{gdpcurrent}{bilhões de U.S. dólares}
 }
 }
 \keyword{datasets}

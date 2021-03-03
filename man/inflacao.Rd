@@ -15,7 +15,7 @@ inflacao
 }
 \description{
 \describe{
-  \item{value}{porcentagem, variação anual}
+  \item{inflacao}{porcentagem, variação anual}
 }
 }
 \keyword{datasets}

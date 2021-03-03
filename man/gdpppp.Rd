@@ -57,7 +57,7 @@ than market exchange rates are discussed in the Finance & Development
  For 2003 revision, see Box A2 from the April 2004 WEO. For the 2000 revision,
  see Box A1 from the May 2000 WEO.
 \describe{
-  \item{value}{bilhões de dólares, paridade de poder de compra}
+  \item{gdpppp}{bilhões de dólares, paridade de poder de compra}
 }
 }
 \keyword{datasets}
